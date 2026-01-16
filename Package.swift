@@ -15,11 +15,11 @@ let package = Package(
 
         .package(
             url: "https://github.com/onevcat/Kingfisher.git",
-            from: "8.0.0"
+            from: "8.6.2"
         ),
         .package(
             url: "https://github.com/Juanpe/SkeletonView.git",
-            from: "1.7.0"
+            from: "1.31.0"
         ),
     ],
     targets: [
