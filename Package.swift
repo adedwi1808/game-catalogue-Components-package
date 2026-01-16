@@ -10,8 +10,8 @@ let package = Package(
         .library(name: "Components", targets: ["Components"])
     ],
     dependencies: [
-        .package(url: "https://github.com/adedwi1808/game-catalogue-Core-package.git", from: "1.0.2"),
-.package(url: "https://github.com/adedwi1808/game-catalogue-Common-package.git", from: "1.0.2"),
+        .package(url: "https://github.com/adedwi1808/game-catalogue-Core-package.git", from: "1.0.3"),
+.package(url: "https://github.com/adedwi1808/game-catalogue-Common-package.git", from: "1.0.3"),
 
         .package(
             url: "https://github.com/onevcat/Kingfisher.git",
@@ -25,7 +25,12 @@ let package = Package(
     targets: [
         .target(
             name: "Components",
-            dependencies: ["Core", "Common", "Kingfisher", "SkeletonView"]
+            dependencies: [
+                .product(name: "Core", package: "game-catalogue-Core-package"),
+                .product(name: "Common", package: "game-catalogue-Common-package"),
+                "Kingfisher",
+                "SkeletonView"
+            ]
         )
     ]
 )
